@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="736dfdcf-a02f-4d35-ba4f-07248d68631c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../module_2/module-2/src/DaoNgu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_2/module-2/src/HIIIIIII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/controller/CustomerRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/model/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/repository/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/service/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/java/com/service/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/demo/demo_final/src/main/resources/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/controller/DanhSachTinTucController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/controller/rest/DanhSachRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/model/DanhMuc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/model/DanhSachTinTuc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/model/dto/DanhSachDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/repository/IDanhMucRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/repository/IDanhSachRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/service/DanhMucService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/service/DanhSachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/service/IDanhMucService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/java/com/service/IDanhSachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_4/exam/exam_mdl4/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss2_typescript/exercise/ package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss2_typescript/exercise/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss2_typescript/exercise/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/CodeGymDN/.idea/CodeGymDN.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/CodeGymDN/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/CodeGymDN/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/CodeGymDN/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/CodeGymDN/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/FuramaResorts/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/FuramaResorts/.idea/FuramaResorts.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/FuramaResorts/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/FuramaResorts/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/out/production/module-2/FuramaResorts/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_2/module-2/src/GiaiThuatSao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_2/module-2/src/GiaiThuatSao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/CaseStudyMdl4Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/CaseStudyMdl4Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/model/employee/userRole/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/java/com/model/employee/userRole/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/case_study_mdl4/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss12_jquery_ajax/font-end/ajax.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss12_jquery_ajax/font-end/ajax.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss_final/exercise/src/main/java/com/ExerciseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss_final/exercise/src/main/java/com/ExerciseApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2L7X9a2clonCbS4ro7ACYuXf81Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="736dfdcf-a02f-4d35-ba4f-07248d68631c" name="Default Changelist" comment="" />
+      <created>1675222943579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675222943579</updated>
+      <workItem from="1675222944674" duration="1546000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
