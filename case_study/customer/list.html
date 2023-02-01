@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!--------------------------- header ------------>
+<div class="container-fluid">
+    <div class="row" style="background-color: whitesmoke">
+        <div class="col ">
+            <a href="https://furamavietnam.com/vi/">
+                <img style="width: 170px;height: 120px;margin-left: 100px"
+                     src="https://static.topcv.vn/company_logos/oruz4IPeY3cyRu9HaWwRFrSdfWfDnw60_1635916800____08c8e444e64ab28b2cef44fb69347361.png">
+            </a>
+        </div>
+        <div class="col ">
+            <a href="https://www.tripadvisor.com/Hotel_Review-g298085-d302750-Reviews-Furama_Resort_Danang-Da_Nang.html">
+                <img style="width: 150px;height: 100px;margin-top: 10px"
+                     src="https://www.kindpng.com/picc/m/606-6060823_trip-advisor-graphic-design-hd-png-download.png">
+            </a>
+        </div>
+        <div class="col ">
+            <a style="text-decoration: none"
+               href="https://www.google.com/maps/place/Furama+Resort+Danang/@16.0399456,108.2488741,17z/data=!3m1!4b1!4m8!3m7!1s0x31420fdbc8cc38ef:0x9a6a3e31121225d2!5m2!4m1!1i2!8m2!3d16.0399456!4d108.2510681?hl=vi-VN">
+                <p style="width: 70%;"><img style="width: 30px;height: 30px;margin-top: 10px;"
+                                            src="https://e7.pngegg.com/pngimages/98/498/png-clipart-computer-icons-address-book-gps-tracking-angle-text.png">
+                    103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ hành Sơn, Tp. Đà Nẵng, Việt Nam
+                </p>
+            </a>
+        </div>
+        <div class="col">
+            <p><img style="width: 30px;height: 30px;margin-top: 15px"
+                    src="https://tse4.mm.bing.net/th?id=OIP.zBov_4E-lB1WDZv942ufBQAAAA&pid=Api&P=0">
+                84-236-3847 333/888</p>
+            <p><img style="width: 30px;height: 30px"
+                    src="https://tse2.mm.bing.net/th?id=OIP.RuPJf5uOjrbyyx1uwVI4lQHaHa&pid=Api&P=0">
+                reservation@furamavietnam.com</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <ul class="nav justify-content-center bg-black">
+        <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="#">EMPLOYEE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/customer">CUSTOMER</a>
+        </li>
+        <li class="nav-item text-decoration-none">
+            <a class="nav-link text-white" href="/facility">SERVICE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/contract">CONTRACT</a>
+        </li>
+    </ul>
+</div>
+
+<table border="1" class="table table-success table-striped">
+    <form th:action="@{/customer}">
+        <div class="container d-flex">
+            <input type="text" placeholder="Nhập tên.." aria-label="Search" name="name" size="15">
+            <input type="text" placeholder="Nhập email.." aria-label="Search" name="email" size="20">
+
+            <select class="form-control" placeholder="Nhập loại khách.." name="customerType" style="width: 200px">
+                <option th:text="${''}"></option>
+                <option th:each="customer:${customerTypes}"
+                        th:value="${customer.id}"
+                        th:text="${customer.name}">
+                </option>
+            </select>
+            <!--        <input type="text" placeholder="Nhập loại khách.." aria-label="Search" name="customerType" size="20"> >-->
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+    </form>
+
+    <p style="color: cadetblue;text-align: center;font-size: 15px" th:text="${mess}"></p>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+        <th>ID Card</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Customer Type</th>
+        <th></th>
+        <th></th>
+        <th>
+            <a th:href="@{/customer/create}">
+                <button class="btn btn-outline-success" type="submit"> +</button>
+            </a>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer,status : ${customerList.content}">
+        <td th:text="${status.count }" class="table-primary"></td>
+        <td th:text="${customer.name}" class="table-success"></td>
+        <td th:text="${customer.dateOfBirth}" class="table-secondary"></td>
+        <td th:if="${customer.gender}==0" class="table-warning">Nữ</td>
+        <td th:if="${customer.gender}==1" class="table-warning">Nam</td>
+        <td th:text="${customer.idCard}" class="table-info"></td>
+        <td th:text="${customer.phoneNumber}" class="table-dark"></td>
+        <td th:text="${customer.email}" class="table-secondary"></td>
+        <td th:text="${customer.address}" class="table-success"></td>
+        <td th:text="${customer.customerType.name}" class="table-info"></td>
+        <td>
+            <a sec:authorize="hasRole('ADMIN')" th:href="@{/customer/edit/__${customer.id}__}">
+                <button type="button" class="btn btn-outline-success">Edit</button>
+            </a>
+        </td>
+        <td>
+            <a sec:authorize="hasRole('ADMIN')" th:attr="onclick=|deleteInfo('${customer.id}','${customer.name}')|"
+               class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                Delete
+            </a>
+        </td>
+        <td>
+            <button th:attr="onclick=|info('${customer.id}')|" type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal0">
+                View
+            </button>
+
+            <!--            <a th:href="@{/customer/view}" class="btn btn-primary" style="margin: 10px;float: right;margin-right: 50px">View</a>-->
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!--xem chi tiet = ajax-->
+<div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel1">Xem chi tiết khách hàng </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-success table-striped;modal-dialog modal-xl">
+                    <thead>
+                    <tr>
+                        <th>Name Customer</th>
+                        <th>Date Of Birth</th>
+                        <th>gender</th>
+                        <th>id Card</th>
+                        <th>phoneNumber</th>
+                        <th>email</th>
+                        <th>address</th>
+                        <th>Customer Type Name</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="abc">
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Thư viên ajax-->
+<script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+<!-- hiển thị chi tiết đối tượng bằng ajac-->
+<script>
+    function info(id) {
+        $.ajax({
+            url: "http://localhost:8080/api-viewCustomerDetail/view/" + id,
+            type: "GET",
+            contentType: "application/json; charset =utf-8",
+            dataType: "json",
+            success: function (data) {
+                // debugger
+                // console.log(data)
+                let myTableContractDetail = '';
+                // for (let i = 0; i < data.length; i++) {
+                myTableContractDetail +=
+                    `<tr>
+                               <td>${data.name}</td>
+                               <td>${data.dateOfBirth}</td>
+                               <td>${data.gender}</td>
+                               <td>${data.idCard}</td>
+                               <td>${data.phoneNumber}</td>
+                               <td>${data.email}</td>
+                               <td>${data.address}</td>
+                               <td>${data.customerType.name}</td>
+                         </tr>
+                             `
+
+                $('#abc').html(myTableContractDetail)
+                // console.log(myTableContractDetail)
+
+                // $("#myTableContractDetail").empty();
+                // $("#myTableContractDetail").append(myTableContractDetail);
+            }
+        });
+    }
+</script>
+
+
+<!--modal delete-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form th:action="@{/customer/delete}" th:method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input name="deleteId" hidden id="deleteId">
+                    <span>Are you want to delete </span>
+                    <span style="color: darkred" id="deleteName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+<!--footer-->
+<footer class="text-center text-white" style="background-color: #caced1;">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Images -->
+        <section class="">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://www.distantjourneys.co.uk/wp-content/uploads/2016/08/SIN-Furama-lobby-1.jpg"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://dulichkhampha24.com/wp-content/uploads/2020/07/Furama-Resort-Danang-c.jpg"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://edge.media.datahc.com/HI552678534.jpg"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://annasherchand.com/wp-content/uploads/2018/10/LRM_EXPORT_13549831543923_20181014_175508295.jpeg"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://pix10.agoda.net/hotelImages/276/276357/276357_16092310040046826254.jpg?s=1024x768"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                            data-ripple-color="light"
+                    >
+                        <img
+                                src="https://media.expedia.com/hotels/1000000/30000/23200/23122/7bfd0f4c_z.jpg"
+                                class="w-100"
+                        />
+                        <a href="#!">
+                            <div
+                                    class="mask"
+                                    style="background-color: rgba(251, 251, 251, 0.2);"
+                            ></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Images -->
+    </div>
+    <!-- Grid container -->
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Youtube</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tiktok</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lazada</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a> Instargram</li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FaceBook</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Zalo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Switter</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>Gmail</li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopee</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 offset-1">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>&copy; copyright by me </p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"/>
+                        </svg>
+                    </a></li>
+                    <li class="ms-3"><a class="link-dark" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"/>
+                        </svg>
+                    </a></li>
+                    <li class="ms-3"><a class="link-dark" href="#">
+                        <svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"/>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</footer>
+<script>
+    function deleteInfo(id, name) {
+        document.getElementById("deleteId").value = id;
+        document.getElementById("deleteName").innerText = name;
+    }
+</script>
+</html>
