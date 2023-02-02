@@ -22,6 +22,5 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log("Mảng tập hợp các fibon= ",fibonaci2);
 console.log("Tổng của các số fibon có trong mảng: ",sum);
-// for (let i = 0; i <fibonaci2.length ; i++) {
-//     sum= sum + fibonaci2[i];
-// }
+ // Khi đọc tới dòng này thì note- k biet làm theo cách đệ quy
+// Có thắc mắc gì vui lòng liên hệ Nương HT c08 .
