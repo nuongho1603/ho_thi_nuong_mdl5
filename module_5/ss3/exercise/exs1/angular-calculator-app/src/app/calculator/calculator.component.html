@@ -1,0 +1,16 @@
+<table class="table-danger">
+<center>
+<input placeholder="number ONE.. " [(ngModel)]="number1" type="number">
+
+  <select [(ngModel)]="calculator">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+
+<input placeholder="number TWO.. " [(ngModel)]="number2" type="number">
+<button (click)="calculate()" type="button" class="btn btn-danger">=></button>
+<b>{{result}}</b>
+</center>
+</table>

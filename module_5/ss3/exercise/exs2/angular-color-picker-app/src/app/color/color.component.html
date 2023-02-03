@@ -1,0 +1,10 @@
+<center>
+<h1 [style.background]="background" [style.color]="color" >COLOR</h1>
+  <span>
+   <input type="color" [value]="background"
+       (change)="changeColorBr($event.target['value'])"> : Chọn màu cho <b>background</b>
+<br>
+  <input type="color" [value]="color"
+         (change)="changeColor($event.target['value'])"> : Chọn màu cho <b>text</b>
+  </span>
+</center>
