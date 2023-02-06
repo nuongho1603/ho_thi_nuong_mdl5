@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dislike.component.css']
 })
 export class DislikeComponent implements OnInit {
-
+dislike = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  dislikeThis() {
+    this.dislike++;
+  }
 }
