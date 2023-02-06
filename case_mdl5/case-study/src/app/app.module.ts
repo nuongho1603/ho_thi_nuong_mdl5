@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FacilityComponent } from './facility/facility.component';
+
+import { FacilityListComponent } from './facilityv/facility-list/facility-list.component';
+import { FacilityEditComponent } from './facilityv/facility-edit/facility-edit.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FacilityComponent } from './facility/facility.component';
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    FacilityComponent
+
+    FacilityListComponent,
+    FacilityEditComponent
   ],
   imports: [
     BrowserModule,

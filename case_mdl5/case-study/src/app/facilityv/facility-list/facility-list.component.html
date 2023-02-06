@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-navigation></app-navigation>
+<table border="1"class="table table-success table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Number Of Floors</th>
+    <th>Max People</th>
+    <th>Cost</th>
+    <th>Rent Type Name</th>
+    <th>Status</th>
+    <th>
+      <button class="btn btn-outline-success" type="submit"> + </button>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let temp of facilityList;index as i">
+    <td class="table-primary">{{i+1}}</td>
+    <td class="table-success">{{temp.name}}</td>
+    <td class="table-secondary">{{temp.area}}</td>
+    <td  class="table-warning">{{temp.numberOfFloors}}</td>
+    <td  class="table-info">{{temp.maxPeople}}</td>
+    <td class="table-dark">{{temp.cost}}</td>
+    <td  class="table-secondary">{{temp.rentType.name}}</td>
+    <td class="table-success">{{temp.status}}</td>
+    <td>
+      <button type="button" class="btn btn-outline-success">Edit</button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-outline-success">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<app-footer></app-footer>
+
