@@ -11,14 +11,11 @@ export class FacilityListComponent implements OnInit {
     {id:1,name:"d",area:20,numberOfFloors:2,maxPeople:2,cost:20,rentType: {id:1,name:"s"},status:"sd"},
     {id:2,name:"dd",area:20,numberOfFloors:2,maxPeople:2,cost:20,rentType: {id:1,name:"s"},status:"sd"}
   ];
-  facility?:Facility;
+  facility: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  editFacility(event : any) {
-this.facilityList.push(event);
-  }
 }
