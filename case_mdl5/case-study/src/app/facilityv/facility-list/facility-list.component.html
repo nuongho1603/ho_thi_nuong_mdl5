@@ -27,7 +27,7 @@
     <td  class="table-secondary">{{temp.rentType.name}}</td>
     <td class="table-success">{{temp.status}}</td>
     <td>
-      <button type="button" class="btn btn-outline-success">Edit</button>
+      <button [routerLink]="['/facility/edit',facility.id]" class="btn btn-outline-success">Edit</button>
     </td>
     <td>
       <button type="button" class="btn btn-outline-success">Delete</button>
@@ -35,5 +35,6 @@
   </tr>
   </tbody>
 </table>
+<app-facility-edit (facilitySubmit)="editFacility($event)"></app-facility-edit>
 <app-footer></app-footer>
 

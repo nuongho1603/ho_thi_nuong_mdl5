@@ -1,90 +1,63 @@
 <div align="center">
-  <form>
+  <form [formGroup]="facilityForm" (ngSubmit)="updateFacility(id)">
     <caption>
       <p style="color: darkolivegreen"><b>EDIT Facility </b></p>
     </caption>
     <table class="table-success" border="3">
-      <input type="hidden">
+      <input type="hidden" formControlName="id">
       <tr>
         <th><label> Name: </label></th>
         <td class="table-secondary">
-          <input type="text">
+          <input type="text" formControlName="name">
           <h6 style="color: red"></h6>
         </td>
       </tr>
       <tr>
-        <th><label > area: </label></th>
+        <th><label > Area: </label></th>
         <td>
-          <input type="text" >
+          <input type="text" formControlName="area">
 
         </td>
       </tr>
       <tr>
-        <th><label> cost: </label></th>
+        <th><label > Number Of Floors: </label></th>
+        <td>
+          <input type="text" >
+          <h6  style="color: red" formControlName="numberOfFloors"></h6>
+        </td>
+      </tr>
+      <tr>
+        <th><label > Max People: </label></th>
+        <td>
+          <input type="text" formControlName="maxPeople">
+
+        </td>
+      </tr>
+      <tr>
+        <th><label> Cost: </label></th>
         <td style="color: darkolivegreen">
-          <input type="text" >
+          <input type="text" formControlName="cost" >
 
-        </td>
-      </tr>
-      <tr>
-        <th><label > maxPeople </label></th>
-        <td>
-          <input type="text" >
-
-        </td>
-      </tr>
-      <tr>
-        <th><label> standardRoom: </label></th>
-        <td>
-          <input type="text" >
-
-        </td>
-      </tr>
-      <tr>
-        <th><label > descriptionOtherConvenience: </label></th>
-        <td>
-          <input type="text" >
-        </td>
-      </tr>
-      <tr>
-        <th><label > poolArea: </label></th>
-        <td>
-          <input type="text" >
-
-        </td>
-      </tr>
-      <tr>
-        <th><label > numberOfFloors: </label></th>
-        <td>
-          <input type="text" >
-          <h6  style="color: red"></h6>
-        </td>
-      </tr>
-      <tr>
-        <th><label > facilityFree: </label></th>
-        <td>
-          <input type="text" >
         </td>
       </tr>
       <tr>
         <th><label > rentType: </label></th>
         <td>
           <select>
-            <option></option>
+            <option formControlName="rentTypeName"></option>
           </select>
         </td>
       </tr>
       <tr>
-        <th><label > facilityType: </label></th>
+        <th><label > Status: </label></th>
         <td>
-          <select >
-            <option ></option>
-          </select>
+          <input type="text" formControlName="status">
+
         </td>
       </tr>
       <tr class="table-danger">
         <td colspan="2" align="center">
-          <input type="submit" STYLE="background: darkolivegreen" value="Save"/>
+          <button>Save</button>
         </td>
       </tr>
     </table>

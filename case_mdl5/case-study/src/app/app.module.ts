@@ -9,6 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import { FacilityListComponent } from './facilityv/facility-list/facility-list.component';
 import { FacilityEditComponent } from './facilityv/facility-edit/facility-edit.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { FacilityEditComponent } from './facilityv/facility-edit/facility-edit.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
