@@ -1,0 +1,314 @@
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container h-100" style="margin-top: 60px">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container">
+          <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/320337327_657656469425549_3854160470653408852_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=06XkDB8YtwoAX_PZZR0&_nc_ht=scontent.fsgn2-8.fna&oh=00_AfDa2yHc6t27MF9A__ixGYNHxVSBXHGsgVWjhvA4Bt6LiQ&oe=63E6EFBA"
+               class="brand_logo">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <form [formGroup]="reactiveForm" (ngSubmit)="submit()">
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input formControlName="name" name="name" class="form-control input_user" value=""
+                   placeholder="User name..." style="color: #60a3bc"/>
+            <p style="color: brown" *ngIf="reactiveForm.controls.name.hasError('required') && reactiveForm.controls.name.dirty">Note*: Khong duoc bo trong! </p>
+            <p style="color: brown" *ngIf="reactiveForm.controls.name.hasError('minlength') && reactiveForm.controls.name.dirty">Note*: ngắn nhất 4 ký tự nha! </p>
+          </div>
+          <div class="input-group mb-3">
+            <!-- Email Address -->
+              <div class="input-group-append">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+              </div>
+              <input formControlName="email" name="email" placeholder="ex: abc123@gmail.com" class="form-control bg-white border-left-0 border-md">
+            <p style="color: brown" *ngIf="reactiveForm.controls.email.hasError('required') && reactiveForm.controls.email.dirty">Note*: Khong duoc bo trong! </p>
+            <p style="color: brown" *ngIf="reactiveForm.controls.email.hasError('pattern')">Note*:Format error! </p>
+
+          </div>
+          <div class="input-group mb-3">
+            <!-- Phone Number -->
+              <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-phone-square text-muted"></i>
+                            </span>
+              </div>
+              <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+                <option value="">+84</option>
+                <option value="">+10</option>
+                <option value="">+15</option>
+                <option value="">+18</option>
+              </select>
+              <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">
+            </div>
+          <div class="input-group mb-7">
+<!-- ----------  gender   ------>
+            <div class="form-item box-item">
+              <div class="form-item-triple">
+                <div class="radio-label">
+                  <label class="label" style="color: #60a3bc">Gender: </label>
+                </div>
+                <div class="form-item">
+                  <input id="Male" type="radio" name="gender" value="Male" data-once>
+                  <label for="Male">Male</label>
+                </div>
+                <div class="form-item">
+                  <input id="Female" type="radio" name="gender" value="Female" data-once>
+                  <label for="Female">Female</label>
+                </div>
+              </div>
+              <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
+            </div>
+<!------------ country   ------->
+              <div class="form-group col-md-4">
+                  <label for="inputState" style="color: #60a3bc">Country: </label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>America</option>
+                  <option>Viet Nam</option>
+                  <option>Canada</option>
+                  <option>China</option>
+                  <option>Combodia</option>
+                  <option>France</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+<!------------- age ----->
+            <div class="input-group mb-2">
+              <div class="input-group-append">
+                <span class="input-group-text"><img src="https://i.pinimg.com/originals/64/c5/71/64c571186072feb9aa3075727fe31dde.jpg" width="17px"></span>
+              </div>
+              <input formControlName="age" name="age" class="form-control input_pass"
+                     placeholder="How old are you?">
+              <p style="color: brown" *ngIf="reactiveForm.controls.age.hasError('invalidAge') && reactiveForm.controls.age.dirty">Note*: Age >18 ! </p>
+              <p style="color: brown" *ngIf="reactiveForm.controls.age.hasError('invalidAge') && reactiveForm.controls.age.dirty">Note*: Age >18 ! </p>
+
+            </div>
+            </div>
+
+          <div class="input-group mb-10">
+            <!-- Password -->
+              <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-lock text-muted"></i>
+                            </span>
+              </div>
+              <input formControlName="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+            <p style="color: brown" *ngIf="reactiveForm.controls.password.hasError('required') && reactiveForm.controls.password.dirty">Note*: Khong duoc bo trong! </p>
+
+            <!-- Password Confirmation -->
+            <div class="input-group-prepend">
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-lock text-muted"></i>-->
+<!--                            </span>-->
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              </div>
+              <input formControlName="confirmPass" type="text" name="confirmPass" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md" (change)="onPasswordChange()">
+            <p style="color: brown" *ngIf="reactiveForm.controls.confirmPass.hasError('required') && reactiveForm.controls.confirmPass.dirty">Note*: Khong duoc bo trong! </p>
+            <p style="color: brown" *ngIf="reactiveForm.controls.confirmPass.hasError('mismatch') ">Note*: Mật khẩu kh khớp với password! </p>
+
+
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customControlInline"
+                     name="remember-me">
+              <label class="custom-control-label" for="customControlInline">I accept these terms and conditions. </label>
+            </div>
+          </div>
+          <div *ngIf="reactiveForm.valid" class="d-flex justify-content-center mt-3 login_container">
+            <button type="submit" class="btn login_btn">Register</button>
+          </div>
+        </form>
+      </div>
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          Đã có tài khoản? <a href="#" class="ml-2">Log in </a>
+        </div>
+        <div class="d-flex justify-content-center links">
+          <a href="#">Another way to register?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--important link source from "https://bootstrapious.com/p/bootstrap-registration-page"-->
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!-- Navbar-->
+<!--<header class="header">-->
+<!--  <nav class="navbar navbar-expand-lg navbar-light py-3">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Navbar Brand &ndash;&gt;-->
+<!--      <a href="#" class="navbar-brand">-->
+<!--        <img src="https://res.cloudinary.com/mhmd/image/upload/v1571398888/Group_1514_tjekh3_zkts1c.svg" alt="logo" width="150">-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</header>-->
+
+
+<!--<div class="container">-->
+<!--  <div class="row py-5 mt-4 align-items-center">-->
+<!--    &lt;!&ndash; For Demo Purpose &ndash;&gt;-->
+<!--    <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">-->
+<!--      <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt="" class="img-fluid mb-3 d-none d-md-block">-->
+<!--      <h1>Create an Account</h1>-->
+<!--      <p class="font-italic text-muted mb-0">Create a minimal registeration page using Bootstrap 4 HTML form elements.</p>-->
+<!--      <p class="font-italic text-muted">Snippet By <a href="https://bootstrapious.com" class="text-muted">-->
+<!--        <u>Bootstrapious</u></a>-->
+<!--      </p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Registeration Form &ndash;&gt;-->
+<!--    <div class="col-md-7 col-lg-6 ml-auto">-->
+<!--      <form action="#">-->
+<!--        <div class="row">-->
+
+<!--          &lt;!&ndash; First Name &ndash;&gt;-->
+<!--          <div class="input-group col-lg-6 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-user text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Last Name &ndash;&gt;-->
+<!--          <div class="input-group col-lg-6 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-user text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Email Address &ndash;&gt;-->
+<!--          <div class="input-group col-lg-12 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-envelope text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Phone Number &ndash;&gt;-->
+<!--          <div class="input-group col-lg-12 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-phone-square text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">-->
+<!--              <option value="">+12</option>-->
+<!--              <option value="">+10</option>-->
+<!--              <option value="">+15</option>-->
+<!--              <option value="">+18</option>-->
+<!--            </select>-->
+<!--            <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">-->
+<!--          </div>.-->
+
+
+<!--          &lt;!&ndash; Job &ndash;&gt;-->
+<!--          <div class="input-group col-lg-12 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-black-tie text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <select id="job" name="jobtitle" class="form-control custom-select bg-white border-left-0 border-md">-->
+<!--              <option value="">Choose your job</option>-->
+<!--              <option value="">Designer</option>-->
+<!--              <option value="">Developer</option>-->
+<!--              <option value="">Manager</option>-->
+<!--              <option value="">Accountant</option>-->
+<!--            </select>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Password &ndash;&gt;-->
+<!--          <div class="input-group col-lg-6 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-lock text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Password Confirmation &ndash;&gt;-->
+<!--          <div class="input-group col-lg-6 mb-4">-->
+<!--            <div class="input-group-prepend">-->
+<!--                            <span class="input-group-text bg-white px-4 border-md border-right-0">-->
+<!--                                <i class="fa fa-lock text-muted"></i>-->
+<!--                            </span>-->
+<!--            </div>-->
+<!--            <input id="passwordConfirmation" type="text" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md">-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Submit Button &ndash;&gt;-->
+<!--          <div class="form-group col-lg-12 mx-auto mb-0">-->
+<!--            <a href="#" class="btn btn-primary btn-block py-2">-->
+<!--              <span class="font-weight-bold">Create your account</span>-->
+<!--            </a>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Divider Text &ndash;&gt;-->
+<!--          <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">-->
+<!--            <div class="border-bottom w-100 ml-5"></div>-->
+<!--            <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>-->
+<!--            <div class="border-bottom w-100 mr-5"></div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Social Login &ndash;&gt;-->
+<!--          <div class="form-group col-lg-12 mx-auto">-->
+<!--            <a href="#" class="btn btn-primary btn-block py-2 btn-facebook">-->
+<!--              <i class="fa fa-facebook-f mr-2"></i>-->
+<!--              <span class="font-weight-bold">Continue with Facebook</span>-->
+<!--            </a>-->
+<!--            <a href="#" class="btn btn-primary btn-block py-2 btn-twitter">-->
+<!--              <i class="fa fa-twitter mr-2"></i>-->
+<!--              <span class="font-weight-bold">Continue with Twitter</span>-->
+<!--            </a>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Already Registered &ndash;&gt;-->
+<!--          <div class="text-center w-100">-->
+<!--            <p class="text-muted font-weight-bold">Already Registered? <a href="#" class="text-primary ml-2">Login</a></p>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<script>-->
+<!--  $(function () {-->
+<!--    $('input, select').on('focus', function () {-->
+<!--      $(this).parent().find('.input-group-text').css('border-color', '#80bdff');-->
+<!--    });-->
+<!--    $('input, select').on('blur', function () {-->
+<!--      $(this).parent().find('.input-group-text').css('border-color', '#ced4da');-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
