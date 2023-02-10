@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sách ngoại ngữ",
+      "price": 16,
+      "description": "Ngoại ngữ là ngôn ngữ thứ 2 mà cần có",
+      "category": {
+        "id": 1,
+        "name": "zzz"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Sách ngoại ngữ",
+      "price": 11,
+      "description": "Ngoại ngữ là ngôn ngữ thứ 2 mà cần có",
+      "category": {
+        "id": 1,
+        "name": "zzz"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Truyện tranh Conan ",
+      "price": 20 ,
+      "description": "Thám tử lừng danh - giải quyết mọi thắc mắc bí ẩn. ",
+      "category": {
+        "id": 1,
+        "name": "zzz"
+      }
+    },
+    {
+      "id":3,
+      "name": "Sách ngữ văn 12 ",
+      "price": 15,
+      "description": "Sachs dành cho học sinh thpt.",
+      "category": {
+        "id": 1,
+        "name": "zzz"
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "zzz"
+    },
+    {
+      "id": 2,
+      "name": "xxx"
+    },
+    {
+      "id": 3,
+      "name": "sss"
+    }
+  ]
+}

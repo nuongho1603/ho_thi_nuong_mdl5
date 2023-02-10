@@ -1,0 +1,54 @@
+<table class="table table-success table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name pro</th>
+    <th scope="col">Price pro</th>
+    <th scope="col">Description pro</th>
+    <th scope="col">Category</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pro of products;index as i">
+    <th scope="row">{{i+1}}</th>
+    <td>{{pro.name}}</td>
+    <td>{{pro.price}}</td>
+    <td>{{pro.description}}</td>
+    <td>{{pro.category.name}}</td>
+    <td>
+      <button [routerLink]="['/edit',pro.id]" type="button" class="btn btn-outline-secondary">Edit</button>
+    </td>
+    <td>
+      <button (click)="temp = pro" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Deletepro
+      </button>
+      <!--      <button type="button" class="btn btn-outline-danger">Delete</button>-->
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input name="deleteId" hidden id="deleteId">
+        <span>Are you want to delete {{temp.name}}</span>?
+<!--        <span style="color: darkred" id="deleteName"></span>-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="delete(temp.id)" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

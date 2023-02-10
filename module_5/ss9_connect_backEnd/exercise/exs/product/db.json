@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "name": "Sách ngữ vănn",
+      "price": 1,
+      "description": "Sachs dành cho học sinh thpt.",
+      "category": {
+        "id": 1,
+        "name": "zzz"
+      },
+      "id": 2
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "zzz"
+    },
+    {
+      "id": 2,
+      "name": "xxx"
+    },
+    {
+      "id": 3,
+      "name": "sss"
+    }
+  ]
+}
