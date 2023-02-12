@@ -1,0 +1,54 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Nuong  cuteo",
+      "country": "Quang Binh citi",
+      "clazz": {
+        "id": 1,
+        "name": "c0822g1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ngan",
+      "country": "Quang Binh citi",
+      "clazz": {
+        "id": 3,
+        "name": "c0822g1"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Dasss Nan",
+      "country": "Quang Binh citi",
+      "clazz": {
+        "id": 3,
+        "name": "c0922g4"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Ngc Nan",
+      "country": "Quang Binh citi",
+      "clazz": {
+        "id": 1,
+        "name": "c0822g1"
+      }
+    }
+  ],
+  "clazz": [
+    {
+      "id": 1,
+      "name": "c0822g1"
+    },
+    {
+      "id": 2,
+      "name": "c0722h1"
+    },
+    {
+      "id": 3,
+      "name": "c0922g4"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<form [formGroup]="studentForm" (ngSubmit)="updateStudent()">
+  <input type="hidden" formControlName="id">
+  <label>Name</label>
+  <input formControlName="name" type="text">
+  <label>Country</label>
+  <input type="text" formControlName="country">
+  <label>Class</label>
+  <select formControlName="clazz" [compareWith]="compareWith">
+    <option *ngFor="let cla of clazz" [ngValue]="cla">{{cla.name}}</option>
+  </select>
+  <button type="submit">Edit</button>
+</form>

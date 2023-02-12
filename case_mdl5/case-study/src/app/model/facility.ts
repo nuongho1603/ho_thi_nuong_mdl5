@@ -7,6 +7,7 @@ export interface Facility {
   numberOfFloors? : number;
   maxPeople? : number;
   cost? : number;
+  price?:number;
 rentType? : RentType;
   status? : string;
 }
