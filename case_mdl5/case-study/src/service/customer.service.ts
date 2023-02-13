@@ -27,7 +27,7 @@ export class CustomerService {
     return this.httpClient.delete<Customer>(this.URL_CUS+"/"+id);
   }
 
-  getViewCus(id: number) {
-    return this.httpClient.get<Customer>(this.URL_CUS + "/" + id);
+  createCus(event:any){
+    return this.httpClient.post(this.URL_CUS,event);
   }
 }

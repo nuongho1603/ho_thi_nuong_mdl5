@@ -1,59 +1,60 @@
 <app-header></app-header>
 <app-navigation></app-navigation>
 <div align="center">
-  <form>
+  <form [formGroup]="customerForm" (ngSubmit)="createCus()">
     <caption>
-      <p style="color: darkolivegreen"> <b>CREATE CUSTOMER</b></p>
+      <p style="color: darkolivegreen"> <b>CREATE CUSTOMER </b></p>
     </caption>
-    <table class="table-success" border="1">
+    <table class="table-success" border="3">
       <input type="hidden" >
       <tr>
         <th> <label  style="color: darkolivegreen"> Name: </label></th>
         <td class="table-secondary" >
-          <input type="text" >
+          <input type="text" formControlName="name" >
+          <h5 style="color:red;" *ngIf="customerForm.controls.name.hasError('required') && customerForm.controls.name.pristine">Khong duoc de trong!</h5>
         </td>
-      </tr >
+      </tr>
       <tr>
         <th> <label style="color: darkolivegreen"> Date Of Birth: </label></th>
         <td>
-          <input type="date">
+          <input type="date" formControlName="dateOfBirth" >
         </td>
       </tr>
       <tr>
         <th><label style="color: darkolivegreen"> Gender: </label></th>
         <td style="color: darkolivegreen">
-          <input type="text">
+          <input type="text" formControlName="gender" >
         </td>
       </tr>
       <tr>
         <th><label style="color: darkolivegreen"> ID Card: </label></th>
         <td>
-          <input type="text" >
+          <input type="text" formControlName="idCard" >
         </td>
       </tr>
       <tr>
         <th><label style="color: darkolivegreen"> Phone Number: </label></th>
         <td>
-          <input type="text" >
+          <input type="text" formControlName="phoneNumber" >
         </td>
       </tr>
       <tr>
         <th><label style="color: darkolivegreen"> Email: </label></th>
         <td>
-          <input type="text">
+          <input type="text" formControlName="email" >
         </td>
       </tr>
       <tr class="table-dark">
         <th><label style="color: darkolivegreen"> Address: </label></th>
         <td>
-          <input type="text">
+          <input type="text" formControlName="address">
         </td>
       </tr>
       <tr>
-        <th><label style="color: darkolivegreen"> Customer Type: </label></th>
+        <th><label style="color: darkolivegreen" > Customer Type: </label></th>
         <td>
-          <select style="color: darkolivegreen">
-            <option ></option>
+          <select style="color: darkolivegreen" formControlName="customerType" [compareWith]="compareFn">
+            <option *ngFor="let cusType of customerType" [ngValue]="cusType"> {{cusType.name}}</option>
           </select>
         </td>
       </tr>
