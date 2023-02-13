@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f15d42f-1475-4a16-b84b-0c713a83d551" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_mdl5/case-study/src/service/customer.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Lg9XLcY1RK6oInDsuyEYfZMRML" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f15d42f-1475-4a16-b84b-0c713a83d551" name="Default Changelist" comment="" />
+      <created>1676281896821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676281896821</updated>
+      <workItem from="1676281899769" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1676281911414">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1676281911414" />
+  </component>
+</project>
