@@ -22,37 +22,50 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td  class="table-primary"></td>
-    <td class="table-success"></td>
-    <td class="table-secondary"></td>
-<!--    <td class="table-warning">Nữ</td>-->
-<!--    <td class="table-warning">Nam</td>-->
-    <td  class="table-info"></td>
-    <td class="table-dark"></td>
-    <td class="table-secondary"></td>
-    <td class="table-success"></td>
-    <td class="table-info"></td>
-    <td class="table-dark"></td>
+  <tr *ngFor="let cus of customerList;index as i">
+    <td  class="table-primary">{{i+1}}</td>
+    <td class="table-success">{{cus.name}}</td>
+    <td class="table-secondary">{{cus.dateOfBirth}}</td>
+    <td  class="table-info">{{cus.gender}}</td>
+    <td class="table-dark">{{cus.idCard}}</td>
+    <td class="table-secondary">{{cus.phoneNumber}}</td>
+    <td class="table-success">{{cus.email}}</td>
+    <td class="table-info">{{cus.address}}</td>
+    <td class="table-dark">{{cus.customerType.name}}</td>
     <td>
       <a>
-        <button type="button" class="btn btn-outline-success">Edit</button>
+        <button [routerLink]="['/customer/edit',cus.id]" type="button" class="btn btn-outline-success">Edit</button>
       </a>
     </td>
     <td>
-      <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+      <button (click)="temp=cus" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Delete
-      </a>
+      </button>
     </td>
     <td>
-      <button type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal" data-bs-target="#exampleModal0">
-        View
-      </button>
+      <button [routerLink]="['/customer/view',cus.id]" class="btn btn-info" type="submit">View</button>
     </td>
   </tr>
   </tbody>
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Bạn chắc chắn muốn delete <span style="color: red">{{temp.name}} </span>?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button (click)="delete(temp.id)" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>
 

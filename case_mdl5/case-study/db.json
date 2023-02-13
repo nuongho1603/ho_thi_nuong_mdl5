@@ -44,6 +44,69 @@
     }
   ],
   "customers": [
-
+    {
+      "id": 1,
+      "name": "s",
+      "dateOfBirth": "2020-01-01",
+      "gender": "nữ",
+      "idCard" : 545466,
+      "phoneNumber": 12356,
+      "email": "asss",
+      "address": "ss",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 2,
+      "name": "s",
+      "dateOfBirth": "2020-01-01",
+      "gender": "nữ",
+      "idCard" : 545466,
+      "phoneNumber": 12356,
+      "email": "asss",
+      "address": "ss",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 3,
+      "name": "s",
+      "dateOfBirth": "2020-01-01",
+      "gender": "nữ",
+      "idCard" : 545466,
+      "phoneNumber": 12356,
+      "email": "asss",
+      "address": "ss",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
   ]
 }

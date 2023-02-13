@@ -2,7 +2,7 @@
 <app-navigation></app-navigation>
 
 <div align="center">
-  <form [formGroup]="facilityForm" (ngSubmit)="updateFacility(id)">
+  <form [formGroup]="facilityForm" (ngSubmit)="updateFacility()">
     <caption>
       <p style="color: darkolivegreen"><b>EDIT Facility </b></p>
     </caption>
@@ -16,21 +16,20 @@
         </td>
       </tr>
       <tr>
-        <th><label > Area: </label></th>
+        <th><label> Area: </label></th>
         <td>
           <input type="text" formControlName="area">
-
         </td>
       </tr>
       <tr>
-        <th><label > Number Of Floors: </label></th>
+        <th><label> Number Of Floors: </label></th>
         <td>
-          <input type="text" >
-          <h6  style="color: red" formControlName="numberOfFloors"></h6>
+          <input type="text" formControlName="numberOfFloors">
+<!--          <h6 style="color: red" formControlName="numberOfFloors"></h6>-->
         </td>
       </tr>
       <tr>
-        <th><label > Max People: </label></th>
+        <th><label> Max People: </label></th>
         <td>
           <input type="text" formControlName="maxPeople">
 
@@ -39,20 +38,27 @@
       <tr>
         <th><label> Cost: </label></th>
         <td style="color: darkolivegreen">
-          <input type="text" formControlName="cost" >
+          <input type="text" formControlName="cost">
 
         </td>
       </tr>
       <tr>
-        <th><label > rentType: </label></th>
+        <th><label> Price: </label></th>
+        <td style="color: darkolivegreen">
+          <input type="text" formControlName="price">
+
+        </td>
+      </tr>
+      <tr>
+        <th><label> rentType: </label></th>
         <td>
-          <select>
-            <option formControlName="rentTypeName"></option>
+          <select formControlName="rentType" [compareWith]="compareFn">
+            <option *ngFor="let rent of rentType" [ngValue]="rent">{{rent.name}}</option>
           </select>
         </td>
       </tr>
       <tr>
-        <th><label > Status: </label></th>
+        <th><label> Status: </label></th>
         <td>
           <input type="text" formControlName="status">
 

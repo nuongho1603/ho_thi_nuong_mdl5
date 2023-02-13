@@ -1,0 +1,84 @@
+{
+  "facility": [
+    {
+      "id": 1,
+      "name": "diem cute",
+      "area": 20,
+      "numberOfFloors": 2,
+      "maxPeople": 2,
+      "cost": 20,
+      "price": 30,
+      "rentType": {
+        "id": 2,
+        "name": "ss"
+      },
+      "status": "sd"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "s"
+    },
+    {
+      "id": 2,
+      "name": "ss"
+    },
+    {
+      "id": 3,
+      "name": "sss"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "nuong cute qua",
+      "dateOfBirth": "2020-01-01",
+      "gender": "nữ",
+      "idCard": 545466,
+      "phoneNumber": 12356,
+      "email": "asss",
+      "address": "ss",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 3,
+      "name": "HIhi",
+      "dateOfBirth": "2020-01-01",
+      "gender": "nữ",
+      "idCard": 545466,
+      "phoneNumber": 12356,
+      "email": "asss",
+      "address": "ss",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
+}

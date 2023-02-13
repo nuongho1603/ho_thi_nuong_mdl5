@@ -1,0 +1,62 @@
+{
+  "facilitys": [
+    {
+      "id": 1,
+      "name": "d",
+      "area": 20,
+      "numberOfFloors": 2,
+      "maxPeople": 2,
+      "cost": 20,
+      "price": 30,
+      "rentType": {
+        "id": 1,
+        "name": "s"
+      },
+      "status": "sd"
+    },
+    {
+      "id": 2,
+      "name": "d",
+      "area": 20,
+      "numberOfFloors": 2,
+      "maxPeople": 2,
+      "cost": 20,
+      "price": 30,
+      "rentType": {
+        "id": 1,
+        "name": "s"
+      },
+      "status": "sd"
+    },{
+      "id": 3,
+      "name": "d",
+      "area": 20,
+      "numberOfFloors": 2,
+      "maxPeople": 2,
+      "cost": 20,
+      "price": 30,
+      "rentType": {
+        "id": 1,
+        "name": "s"
+      },
+      "status": "sd"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "s"
+    },
+    {
+      "id": 2,
+      "name": "ss"
+    },
+    {
+      "id": 3,
+      "name": "sss"
+    }
+  ],
+  "customers": [
+
+  ]
+}
