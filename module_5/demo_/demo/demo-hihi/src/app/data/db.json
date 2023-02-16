@@ -2,35 +2,39 @@
   "students": [
     {
       "id": 1,
-      "name": "Nuong  cuteo",
-      "country": "Quang Binh citi",
+      "name": "diem xinhc",
+      "address": "typicode",
+      "story": "typicode",
+      "clazz": {
+        "id": 3,
+        "name": "c0922g1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "nuong cute",
+      "address": "typicode",
+      "story": "typicode",
       "clazz": {
         "id": 1,
         "name": "c0822g1"
       }
     },
     {
-      "id": 2,
-      "name": "Ngan",
-      "country": "Quang Binh citi",
-      "clazz": {
-        "id": 3,
-        "name": "c0822g1"
-      }
-    },
-    {
       "id": 3,
-      "name": "Dasss Nan",
-      "country": "Quang Binh citi",
+      "name": "ss",
+      "address": "ss",
+      "story": "ss",
       "clazz": {
-        "id": 3,
-        "name": "c0922g4"
+        "id": 2,
+        "name": "c0722g1"
       }
     },
     {
       "id": 4,
-      "name": "Ngc Nan",
-      "country": "Quang Binh citi",
+      "name": "z",
+      "address": "z",
+      "story": "z",
       "clazz": {
         "id": 1,
         "name": "c0822g1"
@@ -44,11 +48,11 @@
     },
     {
       "id": 2,
-      "name": "c0722h1"
+      "name": "c0722g1"
     },
     {
       "id": 3,
-      "name": "c0922g4"
+      "name": "c0922g1"
     }
   ]
 }

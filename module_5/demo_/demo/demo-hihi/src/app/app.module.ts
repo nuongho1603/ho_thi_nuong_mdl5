@@ -5,27 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { StudentComponent } from './component/student/student.component';
 import { HeaderComponent } from './component/header/header.component';
-import { ClazzComponent } from './component/clazz/clazz.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import { StudenEditComponent } from './component/studen-edit/studen-edit.component';
+import { StudentListComponent } from './component/student-list/student-list.component';
+import {HttpClientModule} from '@angular/common/http';
+import { StudentEditComponent } from './component/student-edit/student-edit.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { StudentCreateComponent } from './component/student-create/student-create.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    StudentComponent,
     HeaderComponent,
-    ClazzComponent,
-    StudenEditComponent
+    StudentListComponent,
+    StudentEditComponent,
+    StudentCreateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     ReactiveFormsModule
   ],

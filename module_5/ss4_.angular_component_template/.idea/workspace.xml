@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="445c239e-077f-4d0d-a171-50692af1eaa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../demo_/.idea/demo_.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/json.db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/json.db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-edit/customer-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-edit/customer-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-list/customer-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/app/component/customer/customer-view/customer-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_mdl5/case-study/src/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_mdl5/case-study/src/service/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/clazz/clazz.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/clazz/clazz.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/clazz/clazz.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/clazz/clazz.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/studen-edit/studen-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/studen-edit/studen-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/studen-edit/studen-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/studen-edit/studen-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/student/student.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/student/student.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/student/student.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/component/student/student.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/data/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/model/clazz.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/model/student.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/service/clazz.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/service/clazz.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/service/student.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_/demo/demo-hihi/src/app/service/student.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss6_angular_form/exercise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_angular_form/exercise/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9_connect_backEnd/exercise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9_connect_backEnd/exercise/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2LkmlsJvzMIwrEH5qyxsTYjUuqd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss9_connect_backEnd" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="445c239e-077f-4d0d-a171-50692af1eaa8" name="Default Changelist" comment="" />
+      <created>1676423608178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676423608178</updated>
+      <workItem from="1676423609399" duration="358000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1676423966480">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1676423966480" />
+  </component>
+</project>

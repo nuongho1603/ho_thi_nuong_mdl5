@@ -1,0 +1,14 @@
+<form [formGroup]="studentForm" (ngSubmit)="update()">
+  <input type="hidden" formControlName="id">
+  <label>Name</label>
+  <input type="text" formControlName="name" placeholder="name...">
+  <label>Address</label>
+  <input type="text" formControlName="address" placeholder="address...">
+  <label>Story</label>
+  <input type="text" formControlName="story" placeholder="story...">
+  <label>Class</label>
+<select formControlName="clazz">
+  <option *ngFor="let clas of clazz" [ngValue]="clas">{{clas.name}}</option>
+</select>
+<button type="submit" value="save">Save</button>
+</form>

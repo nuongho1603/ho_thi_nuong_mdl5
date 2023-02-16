@@ -1,0 +1,69 @@
+<div class="card bg-dark text-white">
+  <img src="https://scr.vn/wp-content/uploads/2020/07/n%E1%BB%81n-tr%E1%BA%AFng-d%E1%BB%85-th%C6%B0%C6%A1ng-768x480.jpg"
+       width="1200" height="500px"
+       alt="loading ..">
+  <div class="card-img-overlay">
+    <app-header></app-header>
+    <div align="center">
+      <form [formGroup]="benhVien" (ngSubmit)="update()">
+        <caption>
+          <p style="color: darkolivegreen"><b> SỬA BỆNH ÁN </b></p>
+        </caption>
+        <table class="table-success" border="3">
+          <input type="hidden" formControlName="id">
+          <td> <label style="color: darkolivegreen"> Mã bệnh án:</label></td>
+          <tr>
+            <input type="hidden" formControlName="maBenhAn">
+            <span style="color: red"> NOTE*: Không được phép sửa mã bệnh án!</span>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Benh nhân: </label></th>
+            <td class="table-secondary">
+              <select formControlName="benhNhan" [compareWith]="compareFn">
+                <option *ngFor="let nhan of benhNhan" [ngValue]="nhan">{{nhan.tenBenhNhan}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Ngay Nhap Vien: </label></th>
+            <td>
+              <input type="date" formControlName="ngayNhapVien">
+            </td>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Ngày Ra Vien: </label></th>
+            <td>
+              <input type="date" formControlName="ngayRaVien">
+            </td>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Lý Do: </label></th>
+            <td>
+              <input type="text" formControlName="lyDo">
+            </td>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Phương Pháp: </label></th>
+            <td>
+              <input type="text" formControlName="phuongPhap">
+            </td>
+          </tr>
+          <tr>
+            <th><label style="color: darkolivegreen"> Bác sĩ điều trị : </label></th>
+            <td>
+              <input type="text" formControlName="bacSiDieuTri">
+            </td>
+          </tr>
+
+          <tr class="table-danger">
+            <td colspan="2" align="center">
+              <input type="submit" STYLE="background: darkolivegreen" value="Save"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,84 @@
+<app-header></app-header>
+<div class="row g-3" style="margin-top: 2px">
+  <div class="col-2">
+    <input type="text" #1 class="form-control" placeholder="First name" aria-label="First name" style="width: 200px">
+  </div>
+  <div class="col-2">
+    <select #2 class="form-select" aria-label="Default select example" style="width: 200px">
+      <option value="">--choose--</option>
+      <option></option>
+    </select>
+  </div>
+  <div class="col">
+    <button  class="btn btn-outline-warning">Tìm kiếm</button>
+  </div>
+</div>
+
+<table border="1" class="table table-success table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Mã bệnh án</th>
+    <th>Mã bênh nhân </th>
+    <th>Tên bệnh nhân </th>
+    <th>Ngày nhập viện </th>
+    <th>Ngày ra viện </th>
+    <th>Lý do nhập viện </th>
+    <th>Phương pháp </th>
+    <th>Bác sĩ điều trị </th>
+    <th></th>
+    <th>
+      <a>
+        <button routerLink="create" class="btn btn-outline-success" type="submit"> + </button>
+      </a>
+    </th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let an of benhAn;index as i">
+    <td  class="table-primary">{{i+1}}</td>
+    <td class="table-success">{{an.benhNhan.maBenhNhan}}</td>
+    <td class="table-secondary">{{an.benhNhan.tenBenhNhan}}</td>
+    <td  class="table-info">{{an.ngayNhapVien}}</td>
+    <td class="table-dark">{{an.ngayRaVien}}</td>
+    <td class="table-secondary">{{an.lyDo}}</td>
+    <td class="table-success">{{an.phuongPhap}}</td>
+    <td class="table-info">{{an.bacSiDieuTri}}</td>
+    <td>
+      <a>
+        <button [routerLink]="['/edit',an.id]" type="button" class="btn btn-outline-info"> SỬA </button>
+      </a>
+    </td>
+    <td>
+      <button (click)="temp = an" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        XÓA
+      </button>
+    </td>
+    <td>
+      <button class="btn btn-info" type="submit">View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Bạn chắc chắn muốn thông tin bệnh án có mã <span style="color: red"> {{temp.maBenhAn}}</span> này hay không?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button  (click)="delete(temp.id)" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+

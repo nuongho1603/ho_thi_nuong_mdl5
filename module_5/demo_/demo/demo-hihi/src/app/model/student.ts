@@ -1,8 +1,9 @@
-import {Clazz} from "./clazz";
+import {Clazz} from './clazz';
 
 export interface Student {
-  id? :number;
+  id?: number;
   name?: string;
-country?: string;
-clazz? : Clazz;
+  address?: string;
+  story?: string;
+  clazz?: Clazz;
 }

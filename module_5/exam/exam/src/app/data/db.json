@@ -1,0 +1,63 @@
+{
+  "benhAn": [
+    {
+      "id": 2,
+      "maBenhAn": "NA-123",
+      "benhNhan": {
+        "id": 1,
+        "maBenhNhan": "NH-213",
+        "tenBenhNhan": "Nuong"
+      },
+      "ngayNhapVien": "2002-11-13",
+      "ngayRaVien": "2002-11-13",
+      "lyDo": "s",
+      "phuongPhap": "s",
+      "bacSiDieuTri": "s"
+    },
+    {
+      "id": 3,
+      "maBenhAn": "NA-123",
+      "benhNhan": {
+        "id": 1,
+        "maBenhNhan": "NH-213",
+        "tenBenhNhan": "Nuong"
+      },
+      "ngayNhapVien": "2002-11-13",
+      "ngayRaVien": "2002-11-13",
+      "lyDo": "nuongcute nhat qua dat",
+      "phuongPhap": "s",
+      "bacSiDieuTri": "s"
+    },
+    {
+      "id": 4,
+      "maBenhAn": "NA-123",
+      "benhNhan": {
+        "id": 1,
+        "maBenhNhan": "NH-213",
+        "tenBenhNhan": "Nuong"
+      },
+      "ngayNhapVien": "2002-11-13",
+      "ngayRaVien": "2002-11-13",
+      "lyDo": "s",
+      "phuongPhap": "s",
+      "bacSiDieuTri": "s"
+    }
+  ],
+  "benhNhan": [
+    {
+      "id": 1,
+      "maBenhNhan": "NH-213",
+      "tenBenhNhan": "Nuong"
+    },
+    {
+      "id": 2,
+      "maBenhNhan": "NH-213",
+      "tenBenhNhan": "Diem"
+    },
+    {
+      "id": 3,
+      "maBenhNhan": "NH-213",
+      "tenBenhNhan": "Lan"
+    }
+  ]
+}
